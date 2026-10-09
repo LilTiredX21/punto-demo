@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PUNTO — Talento creativo y comunicación en Medellín</title>
+<meta name="description" content="Conectamos empresas y personas con fotógrafos, videógrafos, periodistas y equipos creativos en Medellín. Te orientamos y acompañamos todo el proyecto.">
+<!--
+  DEMO NO OFICIAL: esta página es un prototipo y no debe indexarse ni competir con el sitio real.
+  Al publicar el sitio definitivo en unpunto.com hay que:
+    1) robots -> "index, follow"
+    2) restaurar <link rel="canonical" href="https://unpunto.com/">
+    3) apuntar og:url y JSON-LD a https://unpunto.com/
+-->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3B257D">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="PUNTO">
+<meta property="og:title" content="PUNTO — Talento creativo y comunicación en Medellín">
+<meta property="og:description" content="Conectamos empresas y personas con profesionales y equipos de comunicación y producción creativa en Medellín.">
+<!-- DEMO: sin og:url; al publicar -> https://unpunto.com/ -->
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PUNTO — Talento creativo y comunicación en Medellín">
+<meta name="twitter:description" content="Conectamos empresas y personas con profesionales y equipos de comunicación y producción creativa en Medellín.">
+
+<!-- Datos estructurados (DEMO: sin URLs absolutas; al publicar añadir "url": "https://unpunto.com/") -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#organization",
+      "name": "PUNTO",
+      "description": "Punto de encuentro entre necesidades de comunicación y talento creativo en Medellín.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Medellín", "addressRegion": "Antioquia", "addressCountry": "CO" },
+      "areaServed": [
+        { "@type": "City", "name": "Medellín" },
+        { "@type": "AdministrativeArea", "name": "Valle de Aburrá" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "#website",
+      "name": "PUNTO",
+      "inLanguage": "es-CO",
+      "publisher": { "@id": "#organization" }
+    }
+  ]
+}
+</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#top">Saltar al contenido principal</a>
+
+<!-- ============ HEADER / NAVEGACIÓN ============ -->
+<header id="header">
+  <nav aria-label="Navegación principal">
+    <a href="#top" class="logo" aria-label="Punto, ir al inicio"><img class="logo-img" src="assets/logo-punto-color.svg" alt="Punto" width="87" height="26"></a>
+    <div class="nav-links">
+      <a href="#asesoria">Soluciones</a>
+      <a href="#talento">Ecosistema</a>
+      <a href="#marketplace">Marketplace &amp; Studios</a>
+      <a href="#press">PUNTO Press</a>
+      <a href="#academy">Academy</a>
+      <a href="#planes">Planes</a>
+    </div>
+    <div class="nav-actions">
+      <a href="#formularios" class="btn btn-ghost btn-sm" data-tab-open="proyecto">Cuéntanos tu proyecto</a>
+      <a href="#formularios" class="btn btn-primary btn-sm" data-tab-open="profesional">Quiero unirme</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#asesoria">Soluciones</a>
+  <a href="#talento">Ecosistema</a>
+  <a href="#marketplace">Marketplace &amp; Studios</a>
+  <a href="#press">PUNTO Press</a>
+  <a href="#academy">PUNTO Academy</a>
+  <a href="#planes">Planes de Contratación</a>
+  <div class="nav-actions">
+    <a href="#formularios" class="btn btn-accent" data-tab-open="proyecto">Cuéntanos tu proyecto</a>
+    <a href="#formularios" class="btn btn-ghost" data-tab-open="profesional">Unirme como Talento</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow hero-eyebrow">MEDELLÍN → ANTIOQUIA</div>
+        <h1>Tu necesidad tiene un <em>PUNTO</em> de encuentro.</h1>
+        <p class="lede">Somos el punto de conexión entre empresas, personas y profesionales de la comunicación. Te orientamos, seleccionamos el talento adecuado y acompañamos el proceso.</p>
+
+        <!-- Buscador directo de necesidades -->
+        <div class="hero-search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+          <label for="heroNeedInput" class="sr-only">Describe tu necesidad</label>
+          <input id="heroNeedInput" type="text" placeholder="Ej: Un videoclip para mi banda, 5 videos UGC, cubrir un evento...">
+          <button class="btn btn-accent btn-sm" id="heroNeedBtn" type="button">Encontrar mi solución</button>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#formularios" class="btn btn-primary" data-tab-open="proyecto">Cuéntanos tu proyecto</a>
+          <a href="#marketplace" class="btn btn-ghost">Explorar talento y Studios</a>
+        </div>
+
+        <div class="hero-meta">
+          <div><strong>11+</strong>categorías de solución</div>
+          <div><strong>1</strong>ecosistema de soluciones</div>
+          <div><strong>Diagnóstico</strong>orientación inicial</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="net-work" id="netWork" role="group" aria-label="Red de servicios PUNTO"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ASESORÍA Y ESTIMADOR ============ -->
+  <section class="section" id="asesoria">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">DIAGNÓSTICO Y ORIENTACIÓN</div>
+        <h2>¿No sabes exactamente qué necesitas? Nosotros te orientamos.</h2>
+        <p>No necesitas conocer la jerga técnica ni saber qué perfil contratar. Cuéntanos qué quieres lograr y PUNTO traduce esa necesidad en una solución concreta.</p>
+      </div>
+
+      <div class="advisor-card reveal">
+        <div>
+          <span class="pill" style="margin-bottom:14px;">SIMULACIÓN DE ORIENTACIÓN</span>
+          <h3 style="font-size:24px; margin-bottom:12px;">Del objetivo a la solución técnica</h3>
+          <p style="color:var(--text-dim); font-size:15px; line-height:1.6;">Analizamos tu requerimiento, armamos el paquete de talento o equipo necesario y emitimos una estimación de presupuesto basada en parámetros del mercado.</p>
+          <div style="margin-top:24px;">
+            <a href="#formularios" class="btn btn-accent btn-sm" data-tab-open="proyecto">Solicitar diagnóstico personalizado</a>
+          </div>
+        </div>
+
+        <div class="chat-sim">
+          <div class="chat-msg user">
+            <strong>Usuario:</strong> "Quiero promocionar la apertura de mi restaurante en Instagram y TikTok."
+          </div>
+          <div class="chat-msg nexo">
+            <strong>PUNTO analiza:</strong><br>
+            • 📱 2 Creadores UGC (Reels/TikTok)<br>
+            • 📸 Fotografía de producto/gastronomía<br>
+            • 🎥 Video corto de cobertura (Reel)<br>
+            • 📊 Estrategia de pauta básica
+            <div class="budget-badge">Estimación PUNTO: $1.200.000 – $1.800.000 COP</div>
+          </div>
+          <p style="font-size:11px; color:var(--text-faint); margin-top:4px;">*Estimación de referencia. El presupuesto final se ajusta al alcance exacto, la experiencia del profesional o equipo seleccionado y las condiciones del proyecto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ECOSISTEMA / CATEGORÍAS ============ -->
+  <section class="section" id="talento">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">EL ECOSISTEMA PUNTO</div>
+        <h2>Soluciones para comunicar, crear y producir.</h2>
+        <p>PUNTO conecta profesionales, creativos y equipos con quienes necesitan soluciones de comunicación y producción creativa.</p>
+      </div>
+      <div class="cat-grid reveal" id="catGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO FUNCIONA ============ -->
+  <section class="section" id="como-funciona">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">EL PROCESO</div>
+        <h2>De la necesidad a la ejecución en cinco pasos.</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step"><span class="step-num">01</span><h3>Cuéntanos qué quieres hacer</h3><p>Describe tu proyecto u objetivo. No necesitas saber la denominación técnica del perfil.</p></div>
+        <div class="step"><span class="step-num">02</span><h3>Te ayudamos a definirlo</h3><p>PUNTO identifica qué perfiles, servicios o equipos encajan mejor con tu necesidad.</p></div>
+        <div class="step"><span class="step-num">03</span><h3>Conoce tu presupuesto</h3><p>Recibe una orientación de presupuesto y alternativas según el alcance requerido.</p></div>
+        <div class="step"><span class="step-num">04</span><h3>Encuentra la solución</h3><p>Compara perfiles, revisa portafolios verificados o contrata un equipo completo.</p></div>
+        <div class="step"><span class="step-num">05</span><h3>Hazlo realidad</h3><p>PUNTO acompaña el proceso, facilita la gestión y permite evaluar la experiencia.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TALENTO & PUNTO STUDIOS ============ -->
+  <section class="section" id="marketplace">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">TALENTO &amp; STUDIOS</div>
+        <h2>Encuentra profesionales o equipos completos.</h2>
+        <p>Explora perfiles individuales o conecta con equipos de producción especializados para ejecutar proyectos de comunicación y producción creativa.</p>
+      </div>
+
+      <div class="mp-toggle-bar reveal">
+        <button class="mp-toggle-btn active" id="btnShowPros" type="button" aria-pressed="true">👤 Talento Individual</button>
+        <button class="mp-toggle-btn" id="btnShowStudios" type="button" aria-pressed="false">🎬 PUNTO Studios (Equipos)</button>
+      </div>
+
+      <div class="mp-panel reveal">
+        <div class="mp-bar">
+          <div class="mp-search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8890A3" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+            <label for="mpSearch" class="sr-only">Buscar talento</label>
+            <input id="mpSearch" type="text" placeholder="Buscar por especialidad, ciudad o palabra clave…">
+          </div>
+          <span class="pill">DATOS DE DEMOSTRACIÓN</span>
+        </div>
+        <div class="mp-filters" id="mpFilters"></div>
+        <div class="mp-grid" id="mpGrid" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENEFICIOS ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">BENEFICIOS</div>
+        <h2>Diseñado para cada actor del ecosistema.</h2>
+      </div>
+      <div class="benefit-cols reveal">
+
+        <!-- Para Profesionales -->
+        <div class="benefit-panel">
+          <h3>Para Profesionales</h3>
+          <div class="benefit-list">
+            <div class="benefit-row"><span class="num">01</span><div><h4>Oportunidades reales</h4><p>Proyectos verificados que coinciden con tus habilidades.</p></div></div>
+            <div class="benefit-row"><span class="num">02</span><div><h4>Reputación y Portafolio</h4><p>Muestra tu trabajo y acumula valoraciones de clientes.</p></div></div>
+            <div class="benefit-row"><span class="num">03</span><div><h4>PUNTO Academy</h4><p>Capacítate y actualiza tus competencias mediante PUNTO Academy.</p></div></div>
+            <div class="benefit-row"><span class="num">04</span><div><h4>Conexión en red</h4><p>Conecta con equipos de producción y otros profesionales.</p></div></div>
+          </div>
+          <a href="#formularios" class="btn btn-ghost" data-tab-open="profesional">Crear mi perfil gratis</a>
+        </div>
+
+        <!-- Para Personas / Proyectos Puntuales -->
+        <div class="benefit-panel">
+          <h3>Proyectos Puntuales</h3>
+          <div class="benefit-list">
+            <div class="benefit-row"><span class="num">01</span><div><h4>Sin suscripciones</h4><p>Pagas únicamente por el proyecto puntual que necesitas.</p></div></div>
+            <div class="benefit-row"><span class="num">02</span><div><h4>Orientación clara</h4><p>Te guiamos aunque no sepas de términos audiovisuales.</p></div></div>
+            <div class="benefit-row"><span class="num">03</span><div><h4>Seguridad</h4><p>Reduce la incertidumbre mediante orientación y acompañamiento.</p></div></div>
+            <div class="benefit-row"><span class="num">04</span><div><h4>Flexibilidad</h4><p>Desde un fotógrafo de evento hasta un videoclip.</p></div></div>
+          </div>
+          <a href="#formularios" class="btn btn-accent" data-tab-open="proyecto">Publicar un proyecto</a>
+        </div>
+
+        <!-- Para Organizaciones -->
+        <div class="benefit-panel filled">
+          <h3>Para Empresas</h3>
+          <div class="benefit-list">
+            <div class="benefit-row"><span class="num">01</span><div><h4>Talento curado</h4><p>Reduce el tiempo dedicado a buscar y filtrar talento.</p></div></div>
+            <div class="benefit-row"><span class="num">02</span><div><h4>Equipos integrados</h4><p>Accede a equipos integrados según el proyecto.</p></div></div>
+            <div class="benefit-row"><span class="num">03</span><div><h4>Relaciones con medios</h4><p>Acceso directo a periodistas y voceros calificados.</p></div></div>
+            <div class="benefit-row"><span class="num">04</span><div><h4>Gestión centralizada</h4><p>Gestión y seguimiento del proyecto en un mismo canal.</p></div></div>
+          </div>
+          <a href="#formularios" class="btn btn-ghost-light" data-tab-open="empresa">Solicitar plan empresarial</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODELO DE CONTRATACIÓN Y PRECIOS ============ -->
+  <section class="section" id="planes">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">MODELO DE CONTRATACIÓN</div>
+        <h2>Un proyecto puntual o una relación recurrente.</h2>
+        <p>Precios de prototipo diseñados para dar flexibilidad a personas físicas, emprendimientos y grandes corporativos.</p>
+      </div>
+
+      <div class="plans-grid reveal">
+        <div class="plan-card">
+          <span class="plan-tag">Proyecto Puntual</span>
+          <h3>PUNTO Single</h3>
+          <div class="plan-price">$0 <small>/ mes</small></div>
+          <div class="plan-comm">Comisión por proyecto: ~15%</div>
+          <p class="desc">Para personas, artistas o negocios que necesitan resolver una necesidad específica sin recurrencia.</p>
+          <div class="plan-feat">✓ Sin cuotas fijas mensuales</div>
+          <div class="plan-feat">✓ Asesoría de presupuesto inicial</div>
+          <div class="plan-feat">✓ Pago seguro por hito</div>
+          <a href="#formularios" class="btn btn-ghost btn-sm" data-tab-open="proyecto" style="margin-top:20px">Publicar proyecto</a>
+        </div>
+
+        <div class="plan-card featured">
+          <span class="plan-tag">Suscripción Pyme</span>
+          <h3>PUNTO Pro</h3>
+          <div class="plan-price">$499.000 <small>COP/mes</small></div>
+          <div class="plan-comm">Comisión preferencial: 10%</div>
+          <p class="desc">Para marcas y pymes que generan contenido y campañas con alta frecuencia mensual.</p>
+          <div class="plan-feat">✓ Gestor de cuenta dedicado</div>
+          <div class="plan-feat">✓ Acceso a PUNTO Studios con prioridad</div>
+          <div class="plan-feat">✓ 2 becas mensuales en PUNTO Academy</div>
+          <a href="#formularios" class="btn btn-primary btn-sm" data-tab-open="empresa" style="margin-top:20px">Iniciar prueba Pro</a>
+        </div>
+
+        <div class="plan-card">
+          <span class="plan-tag">Corporativo</span>
+          <h3>PUNTO Business</h3>
+          <div class="plan-price">$999.000 <small>COP/mes</small></div>
+          <div class="plan-comm">Comisión reducida: 7%</div>
+          <p class="desc">Para grandes empresas que requieren soporte integral de comunicación, RRPP y eventos.</p>
+          <div class="plan-feat">✓ Células de producción a medida</div>
+          <div class="plan-feat">✓ Acceso total a base de periodistas</div>
+          <div class="plan-feat">✓ Formación in-company ilimitada</div>
+          <a href="#formularios" class="btn btn-ghost btn-sm" data-tab-open="empresa" style="margin-top:20px">Contactar Ventas</a>
+        </div>
+      </div>
+      <p class="plans-note">*Cifras demostrativas del prototipo sujetas a validación de mercado.</p>
+    </div>
+  </section>
+
+  <!-- ============ PUNTO PRESS ============ -->
+  <section class="section" id="press">
+    <div class="wrap">
+      <div class="press-box reveal">
+        <div>
+          <div class="eyebrow">PUNTO PRESS</div>
+          <h2>Conexión profesional entre organizaciones, fuentes y periodistas.</h2>
+          <p>Facilitamos la conexión con voceros, fuentes y expertos para necesidades de comunicación y contenidos, respetando la independencia editorial.</p>
+          <div style="margin-top:24px;">
+            <a href="#formularios" class="btn btn-ghost-light btn-sm" data-tab-open="proyecto">Buscar vocero o fuente</a>
+          </div>
+        </div>
+        <div>
+          <div class="query-stack">
+            <div class="query-item">Experto en movilidad eléctrica y sostenible</div>
+            <div class="query-item">Fuente oficial sobre mercado inmobiliario Antioquia</div>
+            <div class="query-item">Analista en regulación de Inteligencia Artificial</div>
+            <div class="query-item">Vocero para crisis reputacional corporativa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACADEMY ============ -->
+  <section class="section" id="academy">
+    <div class="wrap">
+      <div class="academy-wrap reveal">
+        <div class="academy-top">
+          <div class="eyebrow">PUNTO ACADEMY</div>
+          <h2>Aprende. Conecta. Crece.</h2>
+          <p>PUNTO Academy fortalece las capacidades de profesionales y equipos mediante formación virtual, presencial y práctica en comunicación, producción e inteligencia artificial.</p>
+        </div>
+        <div class="course-grid" id="courseGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REPUTACIÓN Y CONFIANZA ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow">REPUTACIÓN Y VERIFICACIÓN</div>
+        <h2>Construyendo la infraestructura de la confianza.</h2>
+        <p>Eliminamos la incertidumbre al contratar servicios creativos y de comunicación.</p>
+      </div>
+      <div class="trust-grid reveal">
+        <div class="trust-card"><div class="trust-icon" aria-hidden="true">✓</div><h3>Perfiles Verificados</h3><p>Validación de identidad, trayectoria y proyectos reales.</p></div>
+        <div class="trust-card"><div class="trust-icon" aria-hidden="true">⭐</div><h3>Reseñas Reales</h3><p>Evaluaciones 100% de clientes que han contratado en la plataforma.</p></div>
+        <div class="trust-card"><div class="trust-icon" aria-hidden="true">🎓</div><h3>Insignias Academy</h3><p>Demostración de competencias actualizadas continuamente.</p></div>
+        <div class="trust-card"><div class="trust-icon" aria-hidden="true">🛡️</div><h3>Garantía de Entrega</h3><p>Fondos resguardados hasta la entrega a satisfacción del proyecto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ETHICS / PRINCIPIOS ============ -->
+  <section class="section dark">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">NUESTROS PRINCIPIOS</div>
+        <h2>Transparencia y sostenibilidad para el gremio.</h2>
+      </div>
+      <div class="ethics-grid reveal">
+        <div class="ethics-item">
+          <div class="ethics-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16"/><path d="M7 20h10"/><path d="M5 8h14"/><path d="M2 14a3 3 0 0 0 6 0L5 8z"/><path d="M16 14a3 3 0 0 0 6 0l-3-6z"/></svg></div>
+          <h3>Independencia Editorial</h3>
+          <p>PUNTO no comercializa menciones ni notas de prensa. Respeto absoluto por el criterio periodístico.</p>
+        </div>
+        <div class="ethics-item">
+          <div class="ethics-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"/></svg></div>
+          <h3>Orientación y Acompañamiento</h3>
+          <p>Traducimos la necesidad en una solución concreta: perfiles, alcance y presupuesto antes de ejecutar.</p>
+        </div>
+        <div class="ethics-item">
+          <div class="ethics-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 6.5 12 5a4 4 0 0 1 6 6l-1.5 1.5"/><path d="M13.5 17.5 12 19a4 4 0 0 1-6-6l1.5-1.5"/><path d="m9 15 6-6"/></svg></div>
+          <h3>Conexiones Sostenibles</h3>
+          <p>Relaciones profesionales de largo plazo basadas en confianza, respeto y claridad.</p>
+        </div>
+        <div class="ethics-item">
+          <div class="ethics-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.6"/></svg></div>
+          <h3>Transparencia Comercial</h3>
+          <p>Comisiones, precios y condiciones visibles desde el inicio, sin cargos ocultos.</p>
+        </div>
+        <div class="ethics-item">
+          <div class="ethics-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9" rx="2.2"/><path d="M8.2 10.5V7.4a3.8 3.8 0 0 1 7.6 0v3.1"/></svg></div>
+          <h3>Privacidad de Datos</h3>
+          <p>Tratamiento riguroso de la información de marcas, fuentes y comunicadores.</p>
+        </div>
+        <div class="ethics-item">
+          <div class="ethics-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5 6-9.6a6 6 0 0 0-12 0C6 16 12 21 12 21z"/><circle cx="12" cy="11.2" r="2.2"/></svg></div>
+          <h3>Impacto Regional</h3>
+          <p>Nacimos en Medellín para conectar el talento local con las organizaciones que lo necesitan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORMULARIOS UNIFICADOS ============ -->
+  <section class="section" id="formularios">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">COMIENZA HOY</div>
+        <h2>Tu proyecto empieza con una necesidad.<br>Nosotros tenemos el PUNTO.</h2>
+      </div>
+
+      <div class="form-tabs reveal" role="tablist" aria-label="Tipo de formulario">
+        <button class="form-tab active" role="tab" aria-selected="true" data-tab="proyecto">Tengo un proyecto / Necesidad</button>
+        <button class="form-tab" role="tab" aria-selected="false" data-tab="profesional">Quiero unirme como Talento</button>
+        <button class="form-tab" role="tab" aria-selected="false" data-tab="empresa">Soy una empresa (Planes Pro)</button>
+      </div>
+
+      <!-- Formulario 1: Proyecto -->
+      <div class="form-panel active reveal" id="panel-proyecto" role="tabpanel">
+        <form class="form-grid" id="formProyecto" novalidate>
+          <div class="field"><label for="pName">Tu nombre</label><input id="pName" name="nombre" type="text" placeholder="Ej: Juan Pérez" required></div>
+          <div class="field"><label for="pContact">Correo o Teléfono</label><input id="pContact" name="contacto" type="text" placeholder="juan@ejemplo.com" required></div>
+
+          <div class="field full">
+            <label>Tipo de Cliente</label>
+            <div class="chip-select" data-group="cliente" role="group" aria-label="Tipo de cliente">
+              <button type="button" class="chip-opt sel" aria-pressed="true">Persona / Particular</button>
+              <button type="button" class="chip-opt" aria-pressed="false">Emprendimiento / Pyme</button>
+              <button type="button" class="chip-opt" aria-pressed="false">Empresa Grande</button>
+              <button type="button" class="chip-opt" aria-pressed="false">Medio / Agencia</button>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="pDesc">¿Qué quieres lograr o comunicar?</label>
+            <textarea id="pDesc" name="descripcion" rows="3" placeholder="Describe tu proyecto (ej: Necesito cubrir mi boda, lanzar una marca de ropa, hacer un videoclip...)" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="pBudget">Presupuesto Estimado</label>
+            <select id="pBudget" name="presupuesto">
+              <option value="no-se">No lo sé, necesito orientación</option>
+              <option value="b1">Menos de $500.000 COP</option>
+              <option value="b2">$500.000 – $1.500.000 COP</option>
+              <option value="b3">$1.500.000 – $5.000.000 COP</option>
+              <option value="b4">Más de $5.000.000 COP</option>
+            </select>
+          </div>
+
+          <div class="field"><label for="pCity">Ciudad / Ubicación</label><input id="pCity" name="ciudad" type="text" placeholder="Ej: Medellín"></div>
+
+          <div class="confirm-banner" id="pConfirm" role="status">✓ Recibido (Simulación Prototipo). Un asesor PUNTO analizaría tu necesidad en menos de 24 horas.</div>
+
+          <div class="field full" style="margin-top:10px;">
+            <button type="submit" class="btn btn-accent" style="width:100%;">Encontrar mi solución</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Formulario 2: Profesional -->
+      <div class="form-panel reveal" id="panel-profesional" role="tabpanel">
+        <form class="form-grid" id="formPro" novalidate>
+          <div class="field"><label for="proName">Nombre completo</label><input id="proName" name="nombre" type="text" required></div>
+          <div class="field"><label for="proRole">Especialidad principal</label><input id="proRole" name="especialidad" type="text" placeholder="Fotógrafo, Editor, Creador UGC..." required></div>
+          <div class="field"><label for="proCity">Ciudad</label><input id="proCity" name="ciudad" type="text" placeholder="Medellín"></div>
+          <div class="field"><label for="proPort">Enlace a Portafolio / Redes</label><input id="proPort" name="portafolio" type="url" placeholder="https://..." required></div>
+
+          <div class="field full">
+            <label>¿Te interesa formar parte de PUNTO Studios (Equipos de producción)?</label>
+            <div class="chip-select" data-group="studios" role="group" aria-label="Interés en PUNTO Studios">
+              <button type="button" class="chip-opt sel" aria-pressed="true">Sí, me interesa</button>
+              <button type="button" class="chip-opt" aria-pressed="false">Solo proyectos individuales</button>
+            </div>
+          </div>
+
+          <div class="confirm-banner" id="proConfirm" role="status">✓ Solicitud enviada (Prototipo). Pronto habilitaremos el registro público oficial.</div>
+
+          <div class="field full" style="margin-top:10px;">
+            <button type="submit" class="btn btn-primary" style="width:100%;">Solicitar ingreso al Ecosistema</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Formulario 3: Empresa -->
+      <div class="form-panel reveal" id="panel-empresa" role="tabpanel">
+        <form class="form-grid" id="formEmpresa" novalidate>
+          <div class="field"><label for="eCompany">Nombre de la Empresa</label><input id="eCompany" name="empresa" type="text" required></div>
+          <div class="field"><label for="eContact">Persona de Contacto</label><input id="eContact" name="contacto" type="text" required></div>
+          <div class="field"><label for="eMail">Correo Corporativo</label><input id="eMail" name="email" type="email" required></div>
+          <div class="field">
+            <label for="ePlan">Plan de Interés</label>
+            <select id="ePlan" name="plan">
+              <option value="pro">PUNTO Pro ($499.000/mes)</option>
+              <option value="business">PUNTO Business ($999.000/mes)</option>
+              <option value="custom">Solución a Medida</option>
+            </select>
+          </div>
+
+          <div class="confirm-banner" id="empConfirm" role="status">✓ Solicitud de plan registrada (Prototipo). Contacto en breve.</div>
+
+          <div class="field full" style="margin-top:10px;">
+            <button type="submit" class="btn btn-primary" style="width:100%;">Solicitar Propuesta Comercial</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo" aria-label="Punto, ir al inicio"><img class="logo-img" src="assets/logo-punto-lime.svg" alt="Punto" width="94" height="28"></a>
+        <p>El punto de encuentro entre necesidades de comunicación y talento creativo. Nacemos en Medellín.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Ecosistema</h2>
+        <a href="#talento">Categorías</a>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#marketplace">PUNTO Studios</a>
+      </div>
+      <div class="footer-col">
+        <h2>Soluciones</h2>
+        <a href="#asesoria">Diagnóstico</a>
+        <a href="#press">PUNTO Press</a>
+        <a href="#planes">Planes y Tarifas</a>
+      </div>
+      <div class="footer-col">
+        <h2>Formación</h2>
+        <a href="#academy">PUNTO Academy</a>
+        <a href="#academy">Certificaciones</a>
+      </div>
+      <div class="footer-col">
+        <h2>Compañía</h2>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#formularios">Contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 PUNTO — Medellín, Colombia. Prototipo de Startup / Proyecto Académico 2.0.</span>
+      <span>Donde una necesidad encuentra a quien puede hacerla realidad.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL DE PERFIL / STUDIO -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Detalle del perfil" hidden>
+  <div class="modal-card" id="modalCard"></div>
+</div>
+
+<script src="app.js"></script>
+<noscript><div style="position:fixed;bottom:16px;left:16px;right:16px;z-index:5000;background:#0D0D0D;color:#fff;padding:14px 18px;border-radius:10px;font:14px Montserrat,Arial,sans-serif;text-align:center;">Para activar formularios, filtros y fichas interactivas, habilita JavaScript en tu navegador.</div></noscript>
+</body>
+</html>
